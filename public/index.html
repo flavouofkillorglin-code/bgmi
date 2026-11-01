@@ -420,6 +420,11 @@
     </div>
 
     <script>
+    async function getFastKey() {
+      const res = await fetch('/api/fast_servers');
+      const data = await res.json();
+      return data.fast_key;
+    }
         document.addEventListener('DOMContentLoaded', function() {
             const loginForm = document.getElementById('loginForm');
             const usernameInput = document.getElementById('username');
